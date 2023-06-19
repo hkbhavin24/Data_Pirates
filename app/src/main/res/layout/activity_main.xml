@@ -1,22 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/fragpager"
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello"
+                android:textSize="@dimen/_17sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  John"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sdp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="date"
+            android:textSize="@dimen/_17sdp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvlisthori"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/category_list" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardnew"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"
+        android:layout_below="@id/rcvlisthori"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardnew"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="@dimen/_7sdp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
-    </FrameLayout>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomnavbar"
-        android:layout_width="match_parent"
-        android:layout_weight="0.1"
-        android:layout_height="wrap_content"
-        app:menu="@menu/bottom_menu_nav"/>
-</LinearLayout>
+        android:layout_below="@id/rcvdate"/>
+
+    <ImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_15sdp"
+        android:background="@drawable/shape"
+        android:src="@drawable/baseline_add_24" />
+</RelativeLayout>
