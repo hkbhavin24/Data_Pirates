@@ -4,21 +4,23 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 
 @Dao
 interface TaskDao {
-
-    @Insert()
+    @Insert
     fun addTask(data : TaskEntity)
 
-    @Query("select * from task")
-    fun getTask() : List<TaskEntity>
-//
-//    @Query("UPDATE food SET name=:name, price=:price, veg= :veg WHERE id=:id")
-//    fun updateFood(name: String, price: Int, veg:Boolean, id:Int)
+    @Query("SELECT * FROM task")
+    fun gettask() : List<TaskEntity>
+
+    @Update
+    fun updatetask(task : TaskEntity)
 
     @Delete
-    fun deleteFood(data: TaskEntity)
+    fun deletetask(data: TaskEntity)
 
+    @Query("DELETE FROM task")
+    fun deleteAlltask()
 
 }

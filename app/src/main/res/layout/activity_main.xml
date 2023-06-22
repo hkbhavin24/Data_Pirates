@@ -63,6 +63,14 @@
         android:layout_marginBottom="@dimen/_10sdp"
         app:cardCornerRadius="@dimen/_10sdp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See All"
+        android:layout_below="@id/cardnew"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:textStyle="bold"/>
+
 <ImageView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
