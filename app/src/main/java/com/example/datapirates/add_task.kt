@@ -7,11 +7,15 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.example.datapirates.Database.TaskDao
+import com.example.datapirates.Database.TaskEntity
 import com.example.datapirates.databinding.ActivityAddTaskBinding
 import java.util.Calendar
 
 
 class add_task : AppCompatActivity() {
+    lateinit var database : TaskDao
+    var save = true
     lateinit var btnDatePicker: Button
     lateinit var btnTimePicker: Button
     lateinit var txtDate: EditText
@@ -27,8 +31,6 @@ class add_task : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityAddTaskBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
         btnDatePicker=findViewById(R.id.btn_date)
         btnTimePicker=findViewById(R.id.btn_time)
         txtDate=findViewById(R.id.in_date)
@@ -40,10 +42,13 @@ class add_task : AppCompatActivity() {
         btnTimePicker.setOnClickListener{
             onclick(it)
         }
+        binding.addtask.setOnClickListener {
+            var data =TaskEntity(binding.title.text.toString(),binding.discription.text.toString(),binding.category.toString(),binding.inDate.toString(),binding.inTime.toString(),save)
+            database.addTask(data)
+        }
     }
     fun onclick(v:View){
         if (v === btnDatePicker) {
-
             val c: Calendar = Calendar.getInstance()
             mYear = c.get(Calendar.YEAR)
             mMonth = c.get(Calendar.MONTH)
@@ -61,7 +66,6 @@ class add_task : AppCompatActivity() {
             mHour = c[Calendar.HOUR_OF_DAY]
             mMinute = c[Calendar.MINUTE]
 
-            // Launch Time Picker Dialog
             val timePickerDialog = TimePickerDialog(this,
                 { view, hourOfDay, minute -> txtTime.setText("$hourOfDay:$minute") },
                 mHour,
