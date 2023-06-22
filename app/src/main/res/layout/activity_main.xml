@@ -63,20 +63,20 @@
         android:layout_marginBottom="@dimen/_10sdp"
         app:cardCornerRadius="@dimen/_10sdp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcvdate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/cardnew"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/baseline_filter_alt_24"
+    android:layout_below="@id/cardnew"
+    android:layout_alignEnd="@id/rcvtask"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvtask"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/rcvdate"
+        android:layout_below="@id/cardnew"
         android:layout_marginStart="@dimen/_7sdp"
-        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_7sdp"
         android:layout_marginBottom="@dimen/_7sdp" />
 
