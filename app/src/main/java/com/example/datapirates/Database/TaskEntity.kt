@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class TaskEntity(
     @ColumnInfo(name = "title") var title:String,
     @ColumnInfo(name = "description") var description:String,
-    @ColumnInfo(name = "title") var task:String,
+    @ColumnInfo(name = "task") var task:String,
     @ColumnInfo(name = "category") var category: String,
     @ColumnInfo(name = "date") var date:String,
     @ColumnInfo(name = "stime") var edate : String,

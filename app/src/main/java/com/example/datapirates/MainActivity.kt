@@ -1,5 +1,6 @@
 package com.example.datapirates
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -41,5 +42,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.rcvCategory.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
         binding.rcvCategory.adapter = CategoryAdapter(list)
+
+        binding.addtask.setOnClickListener {
+            var intent = Intent(this,add_task::class.java)
+            startActivity(intent)
+        }
     }
 }
