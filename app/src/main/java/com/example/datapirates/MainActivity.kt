@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.datapirates.Adapter.CategoryAdapter
-import com.example.datapirates.Database.RoomDB
-import com.example.datapirates.Database.TaskDao
+import com.example.datapirates.RoomDatabase.RoomDB
+import com.example.datapirates.RoomDatabase.TaskDao
 import com.example.datapirates.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

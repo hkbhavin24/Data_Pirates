@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.datapirates.Database.TaskEntity
+import com.example.datapirates.RoomDatabase.TaskEntity
 import com.example.datapirates.R
 
 class CategoryAdapter(list: List<TaskEntity>) : Adapter<CategoryAdapter.CategoryHolder>() {

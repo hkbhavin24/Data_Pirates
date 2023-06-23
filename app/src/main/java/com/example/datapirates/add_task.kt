@@ -7,11 +7,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.datapirates.Adapter.taskadepter
-import com.example.datapirates.Database.RoomDB
-import com.example.datapirates.Database.TaskDao
-import com.example.datapirates.Database.TaskEntity
+import com.example.datapirates.RoomDatabase.RoomDB
+import com.example.datapirates.RoomDatabase.TaskEntity
 import com.example.datapirates.databinding.ActivityAddTaskBinding
 import java.util.Calendar
 

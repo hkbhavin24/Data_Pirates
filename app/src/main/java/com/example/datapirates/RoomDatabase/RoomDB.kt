@@ -1,4 +1,4 @@
-package com.example.datapirates.Database
+package com.example.datapirates.RoomDatabase
 
 import android.content.Context
 import androidx.room.Database

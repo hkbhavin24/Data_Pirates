@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.datapirates.Database.RoomDB
-import com.example.datapirates.Database.TaskEntity
+import com.example.datapirates.RoomDatabase.RoomDB
+import com.example.datapirates.RoomDatabase.TaskEntity
 import com.example.datapirates.R
 
 class taskadepter(list: List<TaskEntity>) : RecyclerView.Adapter<taskadepter.TaskHolder>() {

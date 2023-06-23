@@ -1,4 +1,4 @@
-package com.example.datapirates.Database
+package com.example.datapirates.RoomDatabase
 
 import androidx.room.Dao
 import androidx.room.Delete

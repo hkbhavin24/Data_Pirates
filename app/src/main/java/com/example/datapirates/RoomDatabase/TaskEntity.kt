@@ -1,4 +1,4 @@
-package com.example.datapirates.Database
+package com.example.datapirates.RoomDatabase
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
