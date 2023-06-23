@@ -62,16 +62,26 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/in_date"
-            android:layout_width="200dp"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:hint="Title"
             android:layout_marginStart="@dimen/_20sdp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true" />
+            android:paddingEnd="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/in_date"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="wrap_content"
+
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <Button
             android:id="@+id/btn_date"
@@ -87,16 +97,26 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/in_time"
-            android:layout_width="200dp"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/in_date"
-            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:hint="Title"
             android:layout_marginStart="@dimen/_20sdp"
-            android:layout_alignParentLeft="true" />
+            android:paddingEnd="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/in_time"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="wrap_content"
+
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/btn_time"
