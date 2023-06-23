@@ -1,9 +1,12 @@
-package com.example.datapirates
+package com.example.datapirates.Activity
 
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.datapirates.Fragment.SignInFragment
+import com.example.datapirates.Fragment.SignUpFragment
+import com.example.datapirates.R
 import com.example.datapirates.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {

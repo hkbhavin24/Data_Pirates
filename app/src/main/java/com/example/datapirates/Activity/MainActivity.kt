@@ -1,11 +1,14 @@
-package com.example.datapirates
+package com.example.datapirates.Activity
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.app.ActivityCompat.recreate
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.datapirates.Adapter.CategoryAdapter
 import com.example.datapirates.Adapter.taskadepter
+import com.example.datapirates.R
 import com.example.datapirates.RoomDatabase.RoomDB
 import com.example.datapirates.RoomDatabase.TaskDao
 import com.example.datapirates.databinding.ActivityMainBinding
@@ -47,8 +50,10 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.addtask.setOnClickListener {
-            var intent = Intent(this,add_task::class.java)
+            var intent = Intent(this, add_task::class.java)
             startActivity(intent)
         }
     }
+
+
 }

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".add_task">
+    tools:context=".Activity.add_task">
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -19,8 +19,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number" />
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -35,11 +34,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/discription"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number" />
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
-
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,7 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginTop="10dp"
-            android:hint="Title"
+            android:hint="Set Due Date"
             android:paddingEnd="20dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -106,7 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginTop="10dp"
-            android:hint="Title"
+            android:hint="Set Due Time"
             android:paddingEnd="20dp">
 
             <com.google.android.material.textfield.TextInputEditText

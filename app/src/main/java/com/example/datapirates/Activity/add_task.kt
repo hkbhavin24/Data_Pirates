@@ -1,5 +1,6 @@
-package com.example.datapirates
+package com.example.datapirates.Activity
 
+import android.app.Activity
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.os.Bundle
@@ -7,7 +8,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import com.example.datapirates.Adapter.taskadepter
+import com.example.datapirates.R
 import com.example.datapirates.RoomDatabase.RoomDB
 import com.example.datapirates.RoomDatabase.TaskEntity
 import com.example.datapirates.databinding.ActivityAddTaskBinding
@@ -56,8 +59,10 @@ class add_task : AppCompatActivity() {
                 binding.inTime.toString(),false
             )
             db.task().addTask(data)
+            refreshActivity()
             finish()
         }
+
 
     }
 
@@ -90,5 +95,8 @@ class add_task : AppCompatActivity() {
             )
             timePickerDialog.show()
         }
+    }
+    private fun refreshActivity() {
+        ActivityCompat.recreate(Activity())
     }
 }
